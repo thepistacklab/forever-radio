@@ -1,0 +1,10 @@
+[Unit]
+Description=Weekly Forever Radio dial refresh
+
+[Timer]
+OnCalendar=Sun *-*-* 04:00:00
+RandomizedDelaySec=15min
+Persistent=true
+
+[Install]
+WantedBy=timers.target

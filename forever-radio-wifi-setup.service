@@ -1,0 +1,12 @@
+[Unit]
+Description=Forever Radio WiFi setup from a phone (starts when no network is found)
+After=NetworkManager.service radiod.service
+
+[Service]
+WorkingDirectory=@DIR@
+ExecStart=/usr/bin/python3 @DIR@/wifi_setup.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

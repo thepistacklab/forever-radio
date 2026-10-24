@@ -1,0 +1,11 @@
+[Unit]
+Description=Forever Radio stream watchdog (reconnects stalled stations)
+After=mpd.service radiod.service
+
+[Service]
+ExecStart=/usr/bin/python3 @DIR@/stream_watchdog.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,8 @@
+[Unit]
+Description=Refresh Forever Radio station dial from radio-browser
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=@DIR@/refresh_dial.sh
